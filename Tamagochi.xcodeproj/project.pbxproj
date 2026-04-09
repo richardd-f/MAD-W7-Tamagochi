@@ -6,8 +6,38 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		3FEDF2CE2F8735F4006DA8DB /* TamagochiWatchOS Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 3FEDF2CD2F8735F4006DA8DB /* TamagochiWatchOS Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3FEDF2CF2F8735F4006DA8DB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3FEDF2A92F872E79006DA8DB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3FEDF2CC2F8735F4006DA8DB;
+			remoteInfo = "TamagochiWatchOS Watch App";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		3FEDF2DB2F8735F6006DA8DB /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				3FEDF2CE2F8735F4006DA8DB /* TamagochiWatchOS Watch App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		3FEDF2B12F872E79006DA8DB /* Tamagochi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tamagochi.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3FEDF2C82F8735F4006DA8DB /* TamagochiWatchOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TamagochiWatchOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3FEDF2CD2F8735F4006DA8DB /* TamagochiWatchOS Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TamagochiWatchOS Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -16,10 +46,22 @@
 			path = Tamagochi;
 			sourceTree = "<group>";
 		};
+		3FEDF2D12F8735F4006DA8DB /* TamagochiWatchOS Watch App */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "TamagochiWatchOS Watch App";
+			sourceTree = "<group>";
+		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		3FEDF2AE2F872E79006DA8DB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3FEDF2CA2F8735F4006DA8DB /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -33,6 +75,7 @@
 			isa = PBXGroup;
 			children = (
 				3FEDF2B32F872E79006DA8DB /* Tamagochi */,
+				3FEDF2D12F8735F4006DA8DB /* TamagochiWatchOS Watch App */,
 				3FEDF2B22F872E79006DA8DB /* Products */,
 			);
 			sourceTree = "<group>";
@@ -41,6 +84,8 @@
 			isa = PBXGroup;
 			children = (
 				3FEDF2B12F872E79006DA8DB /* Tamagochi.app */,
+				3FEDF2C82F8735F4006DA8DB /* TamagochiWatchOS.app */,
+				3FEDF2CD2F8735F4006DA8DB /* TamagochiWatchOS Watch App.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -70,6 +115,47 @@
 			productReference = 3FEDF2B12F872E79006DA8DB /* Tamagochi.app */;
 			productType = "com.apple.product-type.application";
 		};
+		3FEDF2C72F8735F4006DA8DB /* TamagochiWatchOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3FEDF2DC2F8735F6006DA8DB /* Build configuration list for PBXNativeTarget "TamagochiWatchOS" */;
+			buildPhases = (
+				3FEDF2C62F8735F4006DA8DB /* Resources */,
+				3FEDF2DB2F8735F6006DA8DB /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3FEDF2D02F8735F4006DA8DB /* PBXTargetDependency */,
+			);
+			name = TamagochiWatchOS;
+			packageProductDependencies = (
+			);
+			productName = TamagochiWatchOS;
+			productReference = 3FEDF2C82F8735F4006DA8DB /* TamagochiWatchOS.app */;
+			productType = "com.apple.product-type.application.watchapp2-container";
+		};
+		3FEDF2CC2F8735F4006DA8DB /* TamagochiWatchOS Watch App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3FEDF2D82F8735F6006DA8DB /* Build configuration list for PBXNativeTarget "TamagochiWatchOS Watch App" */;
+			buildPhases = (
+				3FEDF2C92F8735F4006DA8DB /* Sources */,
+				3FEDF2CA2F8735F4006DA8DB /* Frameworks */,
+				3FEDF2CB2F8735F4006DA8DB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				3FEDF2D12F8735F4006DA8DB /* TamagochiWatchOS Watch App */,
+			);
+			name = "TamagochiWatchOS Watch App";
+			packageProductDependencies = (
+			);
+			productName = "TamagochiWatchOS Watch App";
+			productReference = 3FEDF2CD2F8735F4006DA8DB /* TamagochiWatchOS Watch App.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -81,6 +167,12 @@
 				LastUpgradeCheck = 2630;
 				TargetAttributes = {
 					3FEDF2B02F872E79006DA8DB = {
+						CreatedOnToolsVersion = 26.3;
+					};
+					3FEDF2C72F8735F4006DA8DB = {
+						CreatedOnToolsVersion = 26.3;
+					};
+					3FEDF2CC2F8735F4006DA8DB = {
 						CreatedOnToolsVersion = 26.3;
 					};
 				};
@@ -100,12 +192,28 @@
 			projectRoot = "";
 			targets = (
 				3FEDF2B02F872E79006DA8DB /* Tamagochi */,
+				3FEDF2C72F8735F4006DA8DB /* TamagochiWatchOS */,
+				3FEDF2CC2F8735F4006DA8DB /* TamagochiWatchOS Watch App */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		3FEDF2AF2F872E79006DA8DB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3FEDF2C62F8735F4006DA8DB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3FEDF2CB2F8735F4006DA8DB /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -122,7 +230,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3FEDF2C92F8735F4006DA8DB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3FEDF2D02F8735F4006DA8DB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3FEDF2CC2F8735F4006DA8DB /* TamagochiWatchOS Watch App */;
+			targetProxy = 3FEDF2CF2F8735F4006DA8DB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		3FEDF2BA2F872E7A006DA8DB /* Debug */ = {
@@ -306,6 +429,100 @@
 			};
 			name = Release;
 		};
+		3FEDF2D92F8735F6006DA8DB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = TamagochiWatchOS;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKWatchOnly = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.felix.TamagochiWatchOS.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 26.2;
+			};
+			name = Debug;
+		};
+		3FEDF2DA2F8735F6006DA8DB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = TamagochiWatchOS;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKWatchOnly = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.felix.TamagochiWatchOS.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 26.2;
+			};
+			name = Release;
+		};
+		3FEDF2DD2F8735F6006DA8DB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				INFOPLIST_KEY_CFBundleDisplayName = TamagochiWatchOS;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.felix.TamagochiWatchOS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		3FEDF2DE2F8735F6006DA8DB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				INFOPLIST_KEY_CFBundleDisplayName = TamagochiWatchOS;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.felix.TamagochiWatchOS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -323,6 +540,24 @@
 			buildConfigurations = (
 				3FEDF2BD2F872E7A006DA8DB /* Debug */,
 				3FEDF2BE2F872E7A006DA8DB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3FEDF2D82F8735F6006DA8DB /* Build configuration list for PBXNativeTarget "TamagochiWatchOS Watch App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3FEDF2D92F8735F6006DA8DB /* Debug */,
+				3FEDF2DA2F8735F6006DA8DB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3FEDF2DC2F8735F6006DA8DB /* Build configuration list for PBXNativeTarget "TamagochiWatchOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3FEDF2DD2F8735F6006DA8DB /* Debug */,
+				3FEDF2DE2F8735F6006DA8DB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
