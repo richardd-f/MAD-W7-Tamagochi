@@ -14,17 +14,20 @@ class Pet {
     var name: String
     var wallet: Int
     var isDead: Bool = false
+    var image: String
     
     var fun: Stat
     var cleanliness: Stat
     var hunger: Stat
     var energy: Stat
+
     
     private var timer: Timer?
     
-    init(name: String = "Jamir", wallet: Int = 100) {
+    init(name: String = "Felix", image: String = "petImage2", wallet: Int = 100) {
         self.name = name
         self.wallet = wallet
+        self.image = image
         
         self.fun = Stat(name: "Fun")
         self.cleanliness = Stat(name: "Cleanliness")
@@ -70,11 +73,10 @@ class Pet {
     // MARK: - Actions
     func die() {
         isDead = true
-        stopTimer() // Timers stop on death
+        stopTimer()
     }
     
     func revive() {
-        // Revive costs ALL money and sets health to half
         wallet = 0
         fun.currentValue = fun.maxValue / 2
         cleanliness.currentValue = cleanliness.maxValue / 2
@@ -86,30 +88,56 @@ class Pet {
     }
     
     // MARK: - Interactions
-    func play() {
+    func play() -> [StatChange] {
+        let walletGained = Int.random(in: 20...30)
         fun.increase(by: 30)
-        wallet += Int.random(in: 20...30) // Play gives money
+        wallet += walletGained
         energy.decrease(by: 15)
         cleanliness.decrease(by: 15)
+        
+        return [
+            StatChange(text: "+30 Fun", isPositive: true),
+            StatChange(text: "+\(walletGained) Wallet", isPositive: true),
+            StatChange(text: "-15 Energy", isPositive: false),
+            StatChange(text: "-15 Cleanliness", isPositive: false)
+        ]
     }
     
-    func clean() {
+    func clean() -> [StatChange] {
         cleanliness.increase(by: 30)
         fun.decrease(by: 10)
         energy.decrease(by: 10)
+        
+        return [
+            StatChange(text: "+30 Cleanliness", isPositive: true),
+            StatChange(text: "-10 Fun", isPositive: false),
+            StatChange(text: "-10 Energy", isPositive: false)
+        ]
     }
     
-    func feed() {
+    func feed()  -> [StatChange] {
         if wallet >= 5 {
             wallet -= 5 // Costs $5 per press
             hunger.increase(by: 30)
             cleanliness.decrease(by: 10)
         }
+        
+        return [
+            StatChange(text: "+30 Hunger", isPositive: true),
+            StatChange(text: "-5 Wallet", isPositive: false),
+            StatChange(text: "-10 Cleanliness", isPositive: false)
+        ]
     }
     
-    func rest() {
+    func rest() -> [StatChange] {
         energy.increase(by: 30)
         fun.decrease(by: 10)
         hunger.decrease(by: 10)
+        
+        return [
+            StatChange(text: "+30 Energy", isPositive: true),
+            StatChange(text: "-10 Fun", isPositive: false),
+            StatChange(text: "-10 Hunger", isPositive: false)
+        ]
     }
 }

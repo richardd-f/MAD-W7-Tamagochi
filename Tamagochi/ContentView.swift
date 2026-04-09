@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var pet = Pet()
     @State private var selectedItem: NavigationItem? = .status
     
     // Controls the visibility of the sidebar on iPad
@@ -27,9 +28,9 @@ struct ContentView: View {
         } detail: {
             switch selectedItem {
             case .status:
-                StatusView()
+                DashboardView(pet: pet)
             case .shop:
-                ShopView()
+                ShopView(pet: pet)
             case .about:
                 AboutView()
             case .none:
