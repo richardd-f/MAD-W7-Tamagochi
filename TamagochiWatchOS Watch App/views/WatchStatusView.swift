@@ -25,7 +25,7 @@ struct WatchStatusView: View {
                     StatusRow(label: "Fun", value: pet.fun, color: pet.isDead ? .gray : .pink)
                 }
                 .grayscale(pet.isDead ? 1.0 : 0.0)
-                .blur(radius: pet.isDead ? 2 : 0)
+                .blur(radius: pet.isDead ? 1 : 0)
             }
             
             // Layer 2: Centered Revive Button Overlay
