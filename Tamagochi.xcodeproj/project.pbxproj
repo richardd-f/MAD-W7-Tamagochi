@@ -40,9 +40,24 @@
 		3FEDF2CD2F8735F4006DA8DB /* TamagochiWatchOS Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TamagochiWatchOS Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		3FEDF3192F876DCB006DA8DB /* Exceptions for "Tamagochi" folder in "TamagochiWatchOS Watch App" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				models/Pet.swift,
+				models/Stat.swift,
+				models/StatChange.swift,
+			);
+			target = 3FEDF2CC2F8735F4006DA8DB /* TamagochiWatchOS Watch App */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		3FEDF2B32F872E79006DA8DB /* Tamagochi */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				3FEDF3192F876DCB006DA8DB /* Exceptions for "Tamagochi" folder in "TamagochiWatchOS Watch App" target */,
+			);
 			path = Tamagochi;
 			sourceTree = "<group>";
 		};
